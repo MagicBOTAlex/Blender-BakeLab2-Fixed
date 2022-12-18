@@ -362,36 +362,45 @@ class Baker(Operator):
             bake_settings.use_pass_indirect        = map.bake_indirect
             bake_settings.use_pass_color           = map.bake_color
         
-        m_type = map.type
-        if m_type == 'Albedo':
+        m_type = map.type.lower()
+        print(m_type)
+        bake_type = None
+
+        if m_type == 'albedo':
             bake_type = 'EMIT'
-        if m_type == 'Combined':
+        if m_type == 'combined':
             bake_type = 'COMBINED'
-        if m_type == 'AO':
+        if m_type == 'ao':
             bake_type = 'AO'
-        if m_type == 'Displacement':
+        if m_type == 'displacement':
             bake_type = 'EMIT'
-        if m_type == 'Shadow':
+        if m_type == 'shadow':
             bake_type = 'SHADOW'
-        if m_type == 'Normal':
+        if m_type == 'normal':
             bake_type = 'NORMAL'
-        if m_type == 'UV':
+        if m_type == 'uV':
             bake_type = 'UV'
-        if m_type == 'Roughness':
+        if m_type == 'roughness':
             bake_type = 'ROUGHNESS'
-        if m_type == 'Emission':
+        if m_type == 'emission':
             bake_type = 'EMIT'
-        if m_type == 'Environment':
+        if m_type == 'environment':
             bake_type = 'ENVIRONMENT'
-        if m_type == 'Diffuse':
+        if m_type == 'diffuse':
             bake_type = 'DIFFUSE'
-        if m_type == 'Glossy':
+        if m_type == 'glossy':
             bake_type = 'GLOSSY'
-        if m_type == 'Subsurface':
+        if m_type == 'subsurface':
             bake_type = 'TRANSMISSION'
-        if m_type == 'CustomPass':
+        if m_type == 'transmission':
+            bake_type = 'TRANSMISSION'
+        if m_type == 'customPass':
             bake_type = 'EMIT'
-        return bake_type
+
+        if bake_type is None:
+            pass
+        else: 
+            return bake_type
     
     def calc_surf_area(self, obj):
         import bmesh

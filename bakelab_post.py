@@ -135,7 +135,15 @@ class BakeLab_GenerateMaterials(Operator):
                 imgNode.hide = True
                 imgNode.location = -1000, -900
                 imgNode.image = bake_image
-                links.new(imgNode.outputs[0],pbr.inputs[15])
+                links.new(imgNode.outputs[0],pbr.inputs[17])
+                links.new(uvm.outputs[2],imgNode.inputs[0])
+                pass_available = True
+            if bake_map.type == 'Subsurface':
+                imgNode = nodes.new(type = 'ShaderNodeTexImage')
+                imgNode.hide = True
+                imgNode.location = -1300, -175
+                imgNode.image = bake_image
+                links.new(imgNode.outputs[0],pbr.inputs[3])
                 links.new(uvm.outputs[2],imgNode.inputs[0])
                 pass_available = True
                 

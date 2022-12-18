@@ -1,6 +1,12 @@
 # I have (Unofficially) taken over this project because I wish to use this for my game development.
 ### This fork is for me to make changes and port to Blender 3.2.1
-This fork is not meant to take over the original, but the original git has been abandoned for almost 2 years.
+This fork is not meant to take over the original, but the original repo has been abandoned for almost 2 years.
+#### Fixed version:
+![image](https://user-images.githubusercontent.com/44818698/208271845-88fa4f52-2f11-4e9d-8eaa-ee2bbf80f1d5.png)
+
+#### Original repo
+![image](https://user-images.githubusercontent.com/44818698/208271853-ac4d4f43-a818-4faa-880e-4ed66df9b3ea.png)
+###### Image stolen from https://github.com/j-fan
 <br>
 <br>
 <br>

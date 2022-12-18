@@ -8,6 +8,9 @@ This fork is not meant to take over the original, but the original repo has been
 ![image](https://user-images.githubusercontent.com/44818698/208271853-ac4d4f43-a818-4faa-880e-4ed66df9b3ea.png)
 ###### Image stolen from https://github.com/j-fan
 <br>
+Oh yeah, i also fixed the subsurface bake
+
+<br>
 <br>
 <br>
 <br>

@@ -378,7 +378,7 @@ class Baker(Operator):
             bake_type = 'SHADOW'
         if m_type == 'normal':
             bake_type = 'NORMAL'
-        if m_type == 'uV':
+        if m_type == 'uv':
             bake_type = 'UV'
         if m_type == 'roughness':
             bake_type = 'ROUGHNESS'

@@ -119,7 +119,7 @@ class BakeLab_GenerateMaterials(Operator):
                 imgNode.hide = True
                 imgNode.location = -1000, -200
                 imgNode.image = bake_image
-                links.new(imgNode.outputs[0],pbr.inputs[7])
+                links.new(imgNode.outputs[0],pbr.inputs[6])
                 links.new(uvm.outputs[2],imgNode.inputs[0])
                 pass_available = True
             if bake_map.type == 'Roughness':

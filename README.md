@@ -1,7 +1,17 @@
+# I have (Unofficially) taken over this project because I wish to use this for my game development.
+### This fork is for me to make changes and port to Blender 3.2.1
+This fork is not meant to take over the original, but the original git has been abandoned for almost 2 years.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+# This is the original README (I don't know what to do with this and i decided to just keep it here)
 # Blender-BakeLab2
 ![Thumbnail](bakelab_thumbnail_text_logo_small.jpg)
 BakeLab - A blender addon for baking images.<br>
-Compatible with Blender 2.81 or higher.<br>
 For blender version 2.79 go to [here](https://github.com/Shahzod114/Bakelab-Blender-addon)
 
 Main Features:

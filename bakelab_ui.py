@@ -220,6 +220,13 @@ class BakeLabUI(Panel):
         else:
             if props.bake_state == 'BAKING':
                 layout.label(text = 'Baking', icon = 'RENDER_STILL')
+
+                row = layout.row()
+                row.label(text = 'Compute method:')
+                row.label(text = str(props.compute_device))
+
+                layout.separator()
+
                 if props.bake_mode == 'INDIVIDUAL':
                     row = layout.row()
                     row.label(text = 'Objects:')

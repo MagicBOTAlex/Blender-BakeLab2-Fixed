@@ -314,8 +314,12 @@ class ClearUV(Operator):
                 if uv.active_render and self.save_active_render:
                     continue
                 remove_uvs.append(uv)
-            for uv in remove_uvs:
-                obj.data.uv_layers.remove(uv)
+            if len(remove_uvs) == len(obj.data.uv_layers):
+                for uv in reversed(obj.data.uv_layers):
+                    obj.data.uv_layers.remove(uv)
+            else:
+                for uv in remove_uvs:
+                    obj.data.uv_layers.remove(uv)
         
         return {'FINISHED'}
     

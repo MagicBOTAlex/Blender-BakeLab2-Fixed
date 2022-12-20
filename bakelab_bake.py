@@ -390,7 +390,7 @@ class Baker(Operator):
         if m_type == 'glossy':
             bake_type = 'GLOSSY'
         if m_type == 'subsurface':
-            bake_type = 'TRANSMISSION'
+            self.report({'ERROR'}, 'Apparently, Blender does not support subsurface baking anymore.')
         if m_type == 'transmission':
             bake_type = 'TRANSMISSION'
         if m_type == 'customPass':

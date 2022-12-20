@@ -363,7 +363,6 @@ class Baker(Operator):
             bake_settings.use_pass_color           = map.bake_color
         
         m_type = map.type.lower()
-        print(m_type)
         bake_type = None
 
         if m_type == 'albedo':

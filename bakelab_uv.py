@@ -293,11 +293,11 @@ class ClearUV(Operator):
     
     save_active  : BoolProperty(
         name = 'Save Active',
-        default = True
+        default = False
     )
     save_active_render  : BoolProperty(
         name = 'Save Active Render',
-        default = True
+        default = False
     )
     
     def execute(self,context):

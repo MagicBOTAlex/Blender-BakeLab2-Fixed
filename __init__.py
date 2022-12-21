@@ -12,8 +12,9 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 bl_info = {
-    "name" : "BakeLab",
-    "author" : "Shahzod Boyxonov (specoolar@gmail.com)",
+    "name" : "BakeLab-fix",
+    "original author" : "Shahzod Boyxonov (specoolar@gmail.com)",
+    "maintainer/secondary author" : "Zhentao Wei (zhentao2004@gmail.com)",
     "description" : "Bake textures easily",
     "blender" : (2, 81, 0),
     "version" : (2, 0, 1),

@@ -13,8 +13,7 @@
 
 bl_info = {
     "name" : "BakeLab-fix",
-    "original author" : "Shahzod Boyxonov (specoolar@gmail.com)",
-    "maintainer/secondary author" : "Zhentao Wei (zhentao2004@gmail.com)",
+    "author" : "Shahzod Boyxonov (specoolar@gmail.com) and Zhentao Wei (zhentao2004@gmail.com)",
     "description" : "Bake textures easily",
     "blender" : (2, 81, 0),
     "version" : (2, 0, 1),
@@ -171,7 +170,7 @@ class BakeLabProperties(PropertyGroup):
         )
     save_path : StringProperty(
                 #default=expanduser("~"),
-                default=bpy.path.abspath("//"), # Gets opened .blend file location
+                default=os.path.dirname(bpy.data.filepath), # Gets opened .blend file location
                 name="Folder",
                 subtype="DIR_PATH",
                 update=updateSavePath

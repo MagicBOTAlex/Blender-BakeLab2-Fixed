@@ -53,7 +53,7 @@ from bpy.props import (
             PointerProperty,
             CollectionProperty
         )
-import os
+#import os
 
 def updateAdaptiveImageMinSize(self, context):
     self.image_min_size = min(self.image_min_size, self.image_max_size)
@@ -170,7 +170,7 @@ class BakeLabProperties(PropertyGroup):
         )
     save_path : StringProperty(
                 #default=expanduser("~"),
-                default=os.path.dirname(bpy.data.filepath), # Gets opened .blend file location
+                default="//", # Gets opened .blend file location
                 name="Folder",
                 subtype="DIR_PATH",
                 update=updateSavePath

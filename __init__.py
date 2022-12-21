@@ -13,7 +13,7 @@
 
 bl_info = {
     "name" : "BakeLab-fix",
-    "author" : "Shahzod Boyxonov (specoolar@gmail.com) and Zhentao Wei (zhentao2004@gmail.com)",
+    "author" : "Shahzod Boyxonov (specoolar@gmail.com), Zhentao Wei (zhentao2004@gmail.com)",
     "description" : "Bake textures easily",
     "blender" : (2, 81, 0),
     "version" : (2, 0, 1),
@@ -53,7 +53,7 @@ from bpy.props import (
             PointerProperty,
             CollectionProperty
         )
-from os.path import expanduser
+import os
 
 def updateAdaptiveImageMinSize(self, context):
     self.image_min_size = min(self.image_min_size, self.image_max_size)

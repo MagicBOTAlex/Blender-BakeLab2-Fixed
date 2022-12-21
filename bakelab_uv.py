@@ -88,9 +88,9 @@ class Unwrapper(Operator):
             items =  (
                 ('CREATE_NEW', 'Create New',           'Create and Unwrap new UV Map'),
                 ('IF_MISSING', 'Unwrap if missing',    'Create and Unwrap only if object has no UV Maps'),
-                ('RE_UNWRAP',  'Unwrap active UV map', 'Unwrap existing UV maps (Create if does not exist)')
+                ('RE_UNWRAP',  'Create/re-Unwrap active UV map', 'Unwrap existing UV maps (Create if does not exist)')
             ),
-            default = 'CREATE_NEW'
+            default = 'RE_UNWRAP'
         )
     default_uv_name      : StringProperty(
             name = 'Default UV Name',

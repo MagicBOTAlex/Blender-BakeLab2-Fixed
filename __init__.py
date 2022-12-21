@@ -170,7 +170,8 @@ class BakeLabProperties(PropertyGroup):
             default = "Selection",
         )
     save_path : StringProperty(
-                default=expanduser("~"),
+                #default=expanduser("~"),
+                default=bpy.path.abspath("//"), # Gets opened .blend file location
                 name="Folder",
                 subtype="DIR_PATH",
                 update=updateSavePath

@@ -1,6 +1,8 @@
 # I have (Unofficially) taken over this project because I wish to use this for my game development.
 ### This fork is for me to make changes and port to Blender 3.2.1
 This fork is not meant to take over the original, but the original repo has been abandoned for almost 2 years.
+The reason for the fork detachment is because i wish to see those green squares on my profile for dopamine.
+Original repo: @specoolar/Blender-BakeLab2
 
 # Small guide to export models with textures to FBX
 ###### You can't imagine how much effort I have put into export with textures (There are NO concrete guides). I have spent WEEKS on figuring it out.

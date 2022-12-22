@@ -744,6 +744,7 @@ class Baker(Operator):
                     continue
                 props.baking_map_index += 1
                 
+                #TODO: Create functions instead of large identical if statments
                 if props.pre_join_mesh:
                     for obj in selected_objects:
                         self.ReserveMaterials(obj)

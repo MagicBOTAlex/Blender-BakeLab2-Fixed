@@ -166,6 +166,11 @@ class BakeLabMap(PropertyGroup):
                 description = 'Amount of Samples',
                 min = 1, soft_max = 1024
             )
+    toSmoothMap : BoolProperty(
+        name = 'Replace with smoothness map',
+        default = False, # why is True/False with first uppercase letter??? (Python is bad)
+        description = 'Generate a smoothness map instead of roughness (For Unity)'
+    )
     
     normal_space : EnumProperty(
                 name = 'Normal Space',

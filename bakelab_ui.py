@@ -101,6 +101,9 @@ class BakeLabUI(Panel):
                 row.prop(item, "type")
                 row.prop(props, "show_map_settings", icon = 'PREFERENCES')
                 
+                if item.type == 'Roughness':
+                    col.prop(item, "toSmoothMap")
+                
                 if props.show_map_settings:
                     box = subcol.box()
                     scol = box.column()

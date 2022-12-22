@@ -617,6 +617,14 @@ class Baker(Operator):
         if map.final_aa == 1:
             return
         img.scale(map.target_width, map.target_height)
+
+    def invertGrayScale(self, img):
+        selectedPixel = 0
+        while selectedPixel < len(img.pixels):
+            if selectedPixel == 0 or selectedPixel % 4 != 0:
+                img.pixels[selectedPixel] = 1 - img.pixels[selectedPixel]
+            selectedPixel += 1 #I have had an infinite loop for 2 hours because Python doesn't warn the use of '=+' compared to '+='
+        img.update()
     
     def UpdateDisplayStatus(self, props, obj, map, image):
         props.baking_obj_name = obj.name
@@ -705,6 +713,9 @@ class Baker(Operator):
                     # }
 
                     self.down_scale(bake_image, props, map)
+                    if map.toSmoothMap and bake_type == 'ROUGHNESS':
+                        print("Inverting")
+                        self.invertGrayScale(bake_image)
                     if props.save_or_pack == 'PACK':
                         bake_image.pack()
                     else:
@@ -765,6 +776,8 @@ class Baker(Operator):
                     self.RestoreMaterials()
 
                     self.down_scale(bake_image, props, map)
+                    if map.toSmoothMap and bake_type == 'ROUGHNESS':
+                        self.invertGrayScale(bake_image)
                     if props.save_or_pack == 'PACK':
                         bake_image.pack()
                     else:
@@ -796,6 +809,8 @@ class Baker(Operator):
                         self.RestoreMaterials()
 
                     self.down_scale(bake_image, props, map)
+                    if map.toSmoothMap and bake_type == 'ROUGHNESS':
+                        self.invertGrayScale(bake_image)
                     if props.save_or_pack == 'PACK':
                         bake_image.pack()
                     else:
@@ -861,6 +876,8 @@ class Baker(Operator):
                 # }
 
                 self.down_scale(bake_image, props, map)
+                if map.toSmoothMap and bake_type == 'ROUGHNESS':
+                    self.invertGrayScale(bake_image)
                 if props.save_or_pack == 'PACK':
                     bake_image.pack()
                 else:

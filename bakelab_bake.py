@@ -619,13 +619,19 @@ class Baker(Operator):
         img.scale(map.target_width, map.target_height)
 
     def invertGrayScale(self, img):
-        selectedPixel = 0
-        while selectedPixel < len(img.pixels):
-            if selectedPixel == 0 or selectedPixel % 4 != 0:
-                img.pixels[selectedPixel] = 1 - img.pixels[selectedPixel]
-            selectedPixel += 1 #I have had an infinite loop for 2 hours because Python doesn't warn the use of '=+' compared to '+='
+        import numpy as tf #this is MY code and i can call it as what i wish!
+        np_pixels = tf.array(img.pixels)
+        pixelsToInvert = np_pixels[tf.mod(tf.arange(np_pixels.size)+1,4)!=0]
+        pixelsToInvert = 1 - pixelsToInvert
+        seperatedPixels = np_pixels[tf.mod(tf.arange(np_pixels.size)+1,4)==0]
+        mergedPixels = tf.empty((pixelsToInvert.size + seperatedPixels.size), dtype=pixelsToInvert.dtype)
+        mergedPixels[0::4] = pixelsToInvert[0::3]
+        mergedPixels[1::4] = pixelsToInvert[1::3]
+        mergedPixels[2::4] = pixelsToInvert[2::3]
+        mergedPixels[3::4] = seperatedPixels
+        img.pixels = mergedPixels.tolist()
         img.update()
-    
+        
     def UpdateDisplayStatus(self, props, obj, map, image):
         props.baking_obj_name = obj.name
         if map.type == 'CustomPass':

@@ -9,6 +9,10 @@ Original repo: [@specoolar/Blender-BakeLab2](https://github.com/specoolar/Blende
 ### Select your object, which you wish to export:
 <img src="https://user-images.githubusercontent.com/44818698/208796516-b65b8a17-9e58-4827-b5e2-39653d561be1.png" width=400/>
 
+### Select bake mode
+![image](https://user-images.githubusercontent.com/44818698/209251117-b3218991-af75-4f0d-a722-6cbd231c3144.png)
+Note: "All To One Image" is used for exporting to FBX
+
 ### Open BakeLab tab on the right menu:
 <img src="https://user-images.githubusercontent.com/44818698/208796603-f23e3a32-40c5-44d7-b92a-ca3471ca1a67.png" height=400/>
 
@@ -49,6 +53,11 @@ And here we go!!!<br>
 ###### This object was opened in Paint 3D
 
 # Import FBX with texture into Unity
+### Go back and bake a smoothness map instead of roughness
+![image](https://user-images.githubusercontent.com/44818698/209249522-633b5d34-3b90-4592-94b0-d6d4c2a1992c.png)<br>
+![image](https://user-images.githubusercontent.com/44818698/209249534-d2ad9241-d636-4793-a8c3-23afaede8991.png)<br>
+Enable this checkbox, then rebake and export.
+## Import into Unity
 <img src="https://user-images.githubusercontent.com/44818698/208798522-87788bba-9b02-4147-ac01-61cbb4d23ce8.gif" width=400/><br>
 Notice that this isn't showing textures.<br>
 #### Extract textures from FBX
